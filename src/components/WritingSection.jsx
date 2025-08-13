@@ -34,35 +34,36 @@ const WritingSection = ({ writing, talks, openSource }) => {
                 </Card>
               ))}
             </div>
-          </div>
-          {talks.length > 0 && (
-            <>
-              <h3 className="mb-6 mt-8">Talks</h3>
-              <div className="space-y-4">
-                {talks.map((talk, index) => (
-                  <Card key={index} size="2">
-                    <h4 className="mb-2">{talk.title}</h4>
-                    <p className="text-sm mb-2">{talk.event}</p>
-                    <div className="flex items-center gap-2 text-sm mb-3">
-                      <FaCalendarDays className="w-4 h-4" />
-                      {new Date(talk.date).toLocaleDateString("ko-KR")}
-                    </div>
 
-                    <Button asChild variant="outline" size="sm">
-                      <a
-                        href={talk.slides_url}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <FaLink className="w-4 h-4 mr-2" />
-                        View Slide
-                      </a>
-                    </Button>
-                  </Card>
-                ))}
-              </div>
-            </>
-          )}
+            {talks.length > 0 && (
+              <>
+                <h3 className="mb-6 mt-8">Talks</h3>
+                <div className="space-y-4">
+                  {talks.map((talk, index) => (
+                    <Card key={index} size="2">
+                      <h4 className="mb-2">{talk.title}</h4>
+                      <p className="text-sm mb-2">{talk.event}</p>
+                      <div className="flex items-center gap-2 text-sm mb-3">
+                        <FaCalendarDays className="w-4 h-4" />
+                        {new Date(talk.date).toLocaleDateString("ko-KR")}
+                      </div>
+
+                      <Button asChild variant="outline" size="sm">
+                        <a
+                          href={talk.slides_url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                        >
+                          <FaLink className="w-4 h-4 mr-2" />
+                          View Slide
+                        </a>
+                      </Button>
+                    </Card>
+                  ))}
+                </div>
+              </>
+            )}
+          </div>
           <div>
             <h3 className="mb-6">Open Source</h3>
             <div className="space-y-4">
