@@ -12,7 +12,7 @@ const Header = ({ profile }) => {
   return (
     <header className="min-h-screen flex flex-col justify-center items-center text-center px-4 bg-gradient-to-br from-amber-100 to-green-100">
       <div className="max-w-4xl mx-auto">
-        <h1 className="text-6xl font-bold mb-4 animate-fade-in gradient-text">
+        <h1 className="text-6xl font-bold mb-4 animate-fade-in ">
           {profile.name}
         </h1>
         <h2
